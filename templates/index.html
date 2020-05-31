@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>FP Growth</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+<nav class="navbar navbar-expand-sm bg-secondary navbar-dark">
+  <ul class="navbar-nav">
+    {% block home %}
+    <li class="nav-item active">
+      <a class="nav-link" href="/">| Home |</a>
+    </li>
+    {% endblock %}
+    {% block add_transactions %}
+    <li class="nav-item">
+      <a class="nav-link" href="/addTransactions/">| Add Transactions |</a>
+    </li>
+    {% endblock %}
+    {% block view_transactions %}
+    <li class="nav-item">
+      <a class="nav-link" href="/viewTransactions/">| View Transactions | </a>
+    </li>
+    {% endblock %}
+    {% block frequent_items %}
+    <li class="nav-item">
+      <a class="nav-link" href="/frequentItems/">| Frequent items |</a>
+    </li>
+    {% endblock %}
+<!--    <li class="nav-item">-->
+<!--      <a class="nav-link " href="/rules/">| Rules |</a>-->
+<!--    </li>-->
+    {% block document %}
+    <li class="nav-item">
+      <a href="/document/" class="nav-link">| document |</a>
+    </li>
+    {% endblock %}
+  </ul>
+</nav>
+</div>
+
+{% block content %}
+
+<div class="container">
+  <div class="jumbotron">
+  <h3 class="text-capitalize">incremental algorithm for association rule mining under dynamic threshold</h3>
+
+  </div>
+</div>
+{% endblock %}
+</body>
+</html>

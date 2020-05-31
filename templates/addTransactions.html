@@ -1,0 +1,57 @@
+{% extends 'index.html' %}
+
+{% block home %}
+    <li class="nav-item ">
+      <a class="nav-link" href="/">| Home |</a>
+    </li>
+    {% endblock %}
+    {% block add_transactions %}
+    <li class="nav-item active">
+      <a class="nav-link" href="/addTransactions/">| Add Transactions |</a>
+    </li>
+{% endblock %}
+
+
+{% block content %}
+<div class="container">
+    {% for message in messages %}
+    <h2 class="text-success text-capitalize"> {{ message }} </h2>
+    {% endfor %}
+<form>
+<!--    {% csrf_token %}-->
+    <div class="form-check">
+      <label class="form-check-label">
+        <input type="checkbox" class="form-check-input" value="apple" name="apple">Apple
+      </label>
+    </div>
+
+    <div class="form-check">
+      <label class="form-check-label">
+        <input type="checkbox" class="form-check-input" value="banana" name="banana">Banana
+      </label>
+    </div>
+
+    <div class="form-check">
+      <label class="form-check-label">
+        <input type="checkbox" class="form-check-input" value="grapes" name="grapes">Grapes
+      </label>
+    </div>
+
+    <div class="form-check">
+      <label class="form-check-label">
+        <input type="checkbox" class="form-check-input" value="papaya" name="papaya">Papaya
+      </label>
+    </div>
+
+    <div class="form-check">
+      <label class="form-check-label">
+        <input type="checkbox" class="form-check-input" value="cherries" name="cherries">Cherries
+      </label>
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+
+{% endblock %}

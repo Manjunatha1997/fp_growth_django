@@ -1,0 +1,40 @@
+{% extends 'index.html' %}
+
+
+
+{% block home %}
+    <li class="nav-item ">
+      <a class="nav-link" href="/">| Home |</a>
+    </li>
+{% endblock %}
+
+{% block frequent_items %}
+    <li class="nav-item active">
+      <a class="nav-link" href="/frequentItems/">| Frequent items |</a>
+    </li>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="container">
+    <h2 class="text-capitalize">Frequent Items with minimum support 2</h2>
+    <table class="table table-bordered">
+    <thead>
+    <tr>
+        <th>Frequent Items</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for itemset in patterns.items %}
+    <tr>
+        <td>{{ itemset }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+
+
+</div>
+
+{% endblock %}

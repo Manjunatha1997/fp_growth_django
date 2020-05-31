@@ -1,0 +1,39 @@
+{% extends 'index.html' %}
+
+{% block home %}
+    <li class="nav-item ">
+      <a class="nav-link" href="/">| Home |</a>
+    </li>
+    {% endblock %}
+{% block view_transactions %}
+    <li class="nav-item active">
+      <a class="nav-link" href="/addTransactions/">| View Transactions |</a>
+    </li>
+{% endblock %}
+
+
+{% block content %}
+<div class="container">
+<table class="table table-bordered">
+    <thead>
+    <tr>
+
+        <th>Transactions</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    {% for i in data %}
+
+        <tr>
+
+            <td> {{ i }} </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+</div>
+
+
+{% endblock %}

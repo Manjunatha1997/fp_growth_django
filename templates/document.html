@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+
+
+{% block home %}
+    <li class="nav-item ">
+      <a class="nav-link" href="/">| Home |</a>
+    </li>
+{% endblock %}
+
+{% block document %}
+    <li class="nav-item active">
+      <a href="/document/" class="nav-link">| document |</a>
+    </li>
+{% endblock %}
+
+
+{% block content %}
+{% load static %}
+<div class="caontainer">
+
+
+<h2>Use differt browser, if no document avialable</h2>
+
+<embed src="{% static 'incremental.pdf' %}" type="application/pdf" width="100%" height="600px" />
+</div>
+{% endblock %}
