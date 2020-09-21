@@ -49,6 +49,25 @@ def viewTransactions(request):
 
     return render(request,'viewTransactions.html',{'data':data})
 
+
+def count(request):
+    data = data_set()
+    print(data)
+    data_d = []
+    for i in data:
+        data_d = data_d + i
+    items = set(data_d)
+    count_dict = {}
+    for i in items:
+        count_dict[i] = data_d.count(i)
+    return render(request,'count.html',{'count_dict':count_dict})
+
+
+
+
+
+
+
 def frequentItems(request):
     data = data_set()
     # data = [['chicken', 'eggs', 'oil'],

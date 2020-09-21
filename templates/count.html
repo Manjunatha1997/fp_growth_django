@@ -1,0 +1,31 @@
+{% extends 'index.html' %}
+
+{% block home %}
+    <li class="nav-item">
+      <a class="nav-link" href="/">| Home |</a>
+    </li>
+{% endblock %}
+{% block count %}
+    <li class="nav-item active">
+      <a class="nav-link" href="/count/">| Count | </a>
+    </li>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <table class="table table-bordered table-hover">
+        <tr>
+            <th>Item</th>
+            <th>Count</th>
+        </tr>
+        {% for i,j in count_dict.items %}
+        <tr>
+            <td>{{ i }}</td>
+            <td>{{ j }}</td>
+        </tr>
+
+        {% endfor %}
+    </table>
+</div>
+
+{% endblock %}

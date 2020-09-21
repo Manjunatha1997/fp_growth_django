@@ -8,5 +8,6 @@ urlpatterns = [
     path('rules/',rules),
     path('document/',document),
     path('addTransactions/',addTransactions),
+    path('count/',count),
 
 ]
